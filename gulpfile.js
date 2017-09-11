@@ -35,7 +35,7 @@ gulp.task(PUG, () => {
 })
 
 gulp.task(CSS, () => {
-  const srcPath = path.join(SRC, STYLES, '*.css')
+  const srcPath = path.join(SRC, STYLES, 'index.css')
   const destPath = path.join(PUBLIC, STYLES)
   const fileName = 'main.css'
   const cleanOptions = { compatibility: 'ie8', }
