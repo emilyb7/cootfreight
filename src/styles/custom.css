@@ -1,5 +1,3 @@
-@import 'node_modules/tachyons/css/tachyons.css';
-
 body {
-  background-color: pink; /* just for testing */
+  background-color: yellow;
 }
