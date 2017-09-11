@@ -1,1 +1,8 @@
-p footer
+mixin footerLink (text, href)
+    li
+      a.tracked.no-underline.white(href=`${href}`)=text
+
+footer.bg-black.white.pv4.f6.tc
+    ul.w-100.list.pa0
+        +footerLink('Terms & conditions', '/t_and_c.html')
+    span.tracked © Cootfreight Ltd. 2017

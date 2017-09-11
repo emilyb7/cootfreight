@@ -2,9 +2,11 @@ doctype html
 html(lang="en")
   head
     title= pageTitle
-    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="viewport", content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width")
     link(rel='stylesheet', href='./styles/main.css')
   body
     include ../partials/header
-    h1.green Pug - node template engine puggy pug by Emily
+    
+    block content
+      
     include ../partials/footer
