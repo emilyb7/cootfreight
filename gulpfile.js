@@ -13,12 +13,22 @@ const SRC = 'src'
 const PUBLIC = 'public'
 const STYLES = 'styles'
 const TEMPLATES = 'templates'
+const FONTS = 'fonts'
 
 /* task names */
 const PUG = 'pug'
 const CSS = 'css'
 const BROWSERSYNC = 'browsersync'
 const WATCH = 'watch'
+const COPY = 'copy'
+
+/* tasks */
+
+gulp.task(COPY, () => {
+  const srcPath = path.join(SRC, FONTS, '*.ttf')
+  const destPath = path.join(PUBLIC, FONTS)
+  return gulp.src(srcPath).pipe(gulp.dest(destPath))
+})
 
 gulp.task(PUG, () => {
   const srcPath = path.join(SRC, TEMPLATES, '/views/*.pug')
@@ -60,7 +70,7 @@ gulp.task(BROWSERSYNC, () => {
   })
 })
 
-gulp.task(WATCH, [ BROWSERSYNC, PUG, CSS, ], () => {
+gulp.task(WATCH, [ BROWSERSYNC, COPY, PUG, CSS, ], () => {
   gulp.watch(path.join(SRC, TEMPLATES, '**', '*.pug'), [ PUG, ])
   gulp.watch(path.join(SRC, STYLES, '*.css'), [ CSS, ])
 })
