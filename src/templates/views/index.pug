@@ -8,13 +8,16 @@ mixin headline(text)
 mixin linkImage(image)
     - const src = './images/' + image + '.png'
     img.h3(src=src)
+      
+mixin subheading(text)
+    h2.b.f5.lh-title.tracked.near-black=text
 
 block content
     - const linkColors = ['washed-green', 'blue', 'light-green', 'pink', ]
 
-    #placeholder.min-vh-100.ph3
+    #home_content.ph3
         +headline(home.headline)
-        h2.b.f5.lh-title.tracked=home.tagline
+        +subheading(home.tagline)
         
         #page-links
             for link, index in home.pageLinks
@@ -22,4 +25,8 @@ block content
                   .page_link_box.pa3.h4.w4.flex.items-center.flex-column.justify-around.br3.shadow-6.pointer(class=`bg-${linkColors[index]}`)
                       +linkImage(link.image)
                       span=link.text
+                      
+        +subheading(home.aboutHeader)
+        #about.from-markdown.mv3.f6.lh-copy.fw3
+            != `${home.aboutDescription}`
       

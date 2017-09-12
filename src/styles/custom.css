@@ -16,3 +16,7 @@ body {
   -webkit-text-stroke-width: 1.5px;
   -webkit-text-stroke-color: white;
 }
+
+.from-markdown p {
+  margin: 0.25rem;
+}
