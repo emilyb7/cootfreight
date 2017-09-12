@@ -1,14 +1,4 @@
-const { markdown, } = require('markdown')
-const fs = require('fs')
-const path = require('path')
-
-const toHtml = md => markdown.toHTML(md)
-
-const fileToHtml = file => {
-  const filePath = path.join(__dirname, file)
-  const fileContents = fs.readFileSync(filePath).toString()
-  return toHtml(fileContents)
-}
+const { fileToHtml, } = require('../utils.js')
 
 module.exports = {
   title: 'Specialist freight forwarder - UK and Russia - Coot Freight Ltd',
@@ -37,5 +27,5 @@ module.exports = {
     },
   ],
   aboutHeader: 'Swift and efficient service, with a personal touch.',
-  aboutDescription: fileToHtml('markdown/home.md'),
+  aboutDescription: fileToHtml('home.md'),
 }
