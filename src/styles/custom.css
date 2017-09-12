@@ -2,3 +2,17 @@ body {
   font-family: open-sans;
   background-color: #66cccc;
 }
+
+.home-headline-1 {
+  color: white;
+  -webkit-text-fill-color: red;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: white;
+}
+
+.home-headline-2 {
+  color: white;
+  -webkit-text-fill-color: black;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: white;
+}

@@ -1,4 +1,25 @@
 extends ../layout/base
+mixin headline(text)
+    - const [ part1, part2, ] = text.split(' ')
+    h1.white.ttu.b.tracked.lh-solid
+      span.home-headline-1=part1 + ' '
+      span.home-headline-2=part2
+      
+mixin linkImage(image)
+    - const src = './images/' + image + '.png'
+    img.h3(src=src)
 
 block content
-    #placeholder.min-vh-100
+    - const linkColors = ['washed-green', 'blue', 'light-green', 'pink', ]
+
+    #placeholder.min-vh-100.ph3
+        +headline(home.headline)
+        h2.b.f5.lh-title.tracked=home.tagline
+        
+        #page-links
+            for link, index in home.pageLinks
+              a.no-underline.black.ttu.b.inline-flex.ma2.tc.tracked.pointer(href=link.link)
+                  .page_link_box.pa3.h4.w4.flex.items-center.flex-column.justify-around.br3.shadow-6.pointer(class=`bg-${linkColors[index]}`)
+                      +linkImage(link.image)
+                      span=link.text
+      
