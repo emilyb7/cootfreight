@@ -42,7 +42,7 @@ gulp.task(PUG, () => {
   const srcPath = path.join(SRC, TEMPLATES, '/views/*.pug')
   return gulp
     .src(srcPath)
-    .pipe(pug({ pretty: true, }))
+    .pipe(pug({ pretty: true, locals: require('./src/content/'), }))
     .pipe(rename(path => renamePug(path)))
     .pipe(gulp.dest(PUBLIC))
     .pipe(

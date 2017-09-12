@@ -1,10 +1,11 @@
 mixin footerLink (text, href)
-    li
+    li.ma2
       a.tracked.no-underline.white(href=`${href}`)=text
 
 footer.bg-black.white.pv4.f6.tc
     ul.w-100.list.pa0
-        +footerLink('Terms & conditions', '/t_and_c.html')
+        for link in footer.links
+            +footerLink(link.text, link.link)
     p.tracked © Cootfreight Ltd. 
         span#footer_date.tracked 
     
