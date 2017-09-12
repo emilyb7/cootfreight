@@ -10,7 +10,7 @@ module.exports = {
     },
     {
       text: 'Terms & Conditions',
-      link: './t_and_c',
+      link: './t-and-c',
     },
   ],
 }
