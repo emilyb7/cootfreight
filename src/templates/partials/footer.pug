@@ -1,11 +1,11 @@
 mixin footerLink (text, href)
-    li.ma2
+    li.ma3
       a.tracked.no-underline.white(href=`${href}`)=text
 
-footer.bg-black.white.pv4.f6.tc
+footer.bg-black.white.pv4.f7.tc
     ul.w-100.list.pa0
         for link in footer.links
             +footerLink(link.text, link.link)
-    p.tracked © Cootfreight Ltd. 
+    p.mt4.tracked © Cootfreight Ltd. 
         span#footer_date.tracked 
     
