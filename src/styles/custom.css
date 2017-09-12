@@ -3,6 +3,12 @@ body {
   background-color: #66cccc;
 }
 
+input {
+  outline: none;
+  border: 0;
+  font-family: open-sans;
+}
+
 .home-headline-1 {
   color: white;
   -webkit-text-fill-color: red;
