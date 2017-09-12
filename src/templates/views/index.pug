@@ -1,4 +1,7 @@
 extends ../layout/base
+include ../mixins/snippets
+
+
 mixin headline(text)
     - const [ part1, part2, ] = text.split(' ')
     h1.white.ttu.b.tracked.lh-solid
@@ -34,6 +37,4 @@ block content
             img.w-40.mr3.inline-flex(src="./images/bifa-white.png" alt="Badge of the British International Freight Association")
             img.w-40.ml3.inline-flex(src="./images/fiata-logo-white.png" alt="Badge of the Fiata organisation")
         
-        form(action="./contact")  
-            input(type="submit" value="Get in touch!").bg-red.white.pa2.mb5.w-100.f4.shadow-6.lh-title.tracked.tc
-      
+        +ctaButton('./contact', 'Get in touch!')
