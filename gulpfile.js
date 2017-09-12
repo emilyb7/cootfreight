@@ -8,6 +8,7 @@ const browserSync = require('browser-sync').create()
 
 const renamePug = path => Object.assign({}, path, { extname: '.html', })
 
+/* CONSTANTS */
 /* directory names */
 const SRC = 'src'
 const PUBLIC = 'public'
@@ -25,7 +26,6 @@ const COPY_FONTS = 'copyfonts'
 const COPY_IMAGES = 'copyimages'
 
 /* tasks */
-
 gulp.task(COPY_FONTS, () => {
   const srcPath = path.join(SRC, FONTS, '*.ttf')
   const destPath = path.join(PUBLIC, FONTS)
