@@ -6,8 +6,13 @@ const cleanCSS = require('gulp-clean-css')
 const concatCss = require('gulp-concat-css')
 const browserSync = require('browser-sync').create()
 
+/* content to be injected into pug templates */
+const content = require('./src/content/')
+
+/* helper functions */
 const renamePug = path => Object.assign({}, path, { extname: '.html', })
 
+/* CONSTANTS */
 /* directory names */
 const SRC = 'src'
 const PUBLIC = 'public'
@@ -25,7 +30,6 @@ const COPY_FONTS = 'copyfonts'
 const COPY_IMAGES = 'copyimages'
 
 /* tasks */
-
 gulp.task(COPY_FONTS, () => {
   const srcPath = path.join(SRC, FONTS, '*.ttf')
   const destPath = path.join(PUBLIC, FONTS)
@@ -42,7 +46,7 @@ gulp.task(PUG, () => {
   const srcPath = path.join(SRC, TEMPLATES, '/views/*.pug')
   return gulp
     .src(srcPath)
-    .pipe(pug({ pretty: true, }))
+    .pipe(pug({ pretty: true, locals: content, }))
     .pipe(rename(path => renamePug(path)))
     .pipe(gulp.dest(PUBLIC))
     .pipe(
