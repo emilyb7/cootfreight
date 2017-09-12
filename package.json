@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "pre-deploy": "git checkout -B gh-pages && gulp build && git add -f public/ && git commit -m \"deploy\"",
+    "pre-deploy":
+      "git checkout -B gh-pages && gulp clean && gulp build && git add -f public/ && git commit -m \"deploy\"",
     "deploy": "npm run pre-deploy && git push -f origin gh-pages"
   },
   "author": "",
