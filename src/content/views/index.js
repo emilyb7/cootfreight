@@ -1,4 +1,4 @@
-const { fileToHtml, } = require('../utils.js')
+const { fileToHtml, } = require('../../utils.js')
 
 module.exports = {
   title: 'Specialist freight forwarder - UK and Russia - Coot Freight Ltd',

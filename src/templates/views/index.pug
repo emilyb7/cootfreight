@@ -19,22 +19,22 @@ block content
     - const linkColors = ['washed-green', 'blue', 'light-green', 'pink', ]
 
     #home_content.pa3
-        +headline(home.headline)
-        +subheading(home.tagline)
+        +headline(view.headline)
+        +subheading(view.tagline)
         
         #page-links
-            for link, index in home.pageLinks
+            for link, index in view.pageLinks
               a.no-underline.black.ttu.b.inline-flex.ma2.tc.tracked.pointer(href=link.link)
                   .page_link_box.pa3.h4.w4.flex.items-center.flex-column.justify-around.br3.shadow-6.pointer(class=`bg-${linkColors[index]}`)
                       +linkImage(link.image)
                       span=link.text
                       
-        +subheading(home.aboutHeader)
+        +subheading(view.aboutHeader)
         #about.from-markdown.mv3.f6.lh-copy.fw3
-            != `${home.aboutDescription}`
+            != `${view.aboutDescription}`
             
         #badges.h4.w-100.tc
-            img.w-40.mr3.inline-flex(src=home.badges[0].image alt=home.badges[0].alt)
-            img.w-40.ml3.inline-flex(src=home.badges[1].image alt=home.badges[1].alt)
+            img.w-40.mr3.inline-flex(src=view.badges[0].image alt=view.badges[0].alt)
+            img.w-40.ml3.inline-flex(src=view.badges[1].image alt=view.badges[1].alt)
         
-        +ctaButton('./contact', home.buttonText)
+        +ctaButton('./contact', view.buttonText)
