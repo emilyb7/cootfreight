@@ -34,7 +34,7 @@ block content
             != `${home.aboutDescription}`
             
         #badges.h4.w-100.tc
-            img.w-40.mr3.inline-flex(src="./images/bifa-white.png" alt="Badge of the British International Freight Association")
-            img.w-40.ml3.inline-flex(src="./images/fiata-logo-white.png" alt="Badge of the Fiata organisation")
+            img.w-40.mr3.inline-flex(src=home.badges[0].image alt=home.badges[0].alt)
+            img.w-40.ml3.inline-flex(src=home.badges[1].image alt=home.badges[1].alt)
         
-        +ctaButton('./contact', 'Get in touch!')
+        +ctaButton('./contact', home.buttonText)

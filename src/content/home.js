@@ -26,6 +26,18 @@ module.exports = {
       image: 'operator',
     },
   ],
+  // max 2 badges displayed on homepage
+  badges: [
+    {
+      image: './images/bifa-white.png',
+      alt: 'Badge of the British International Freight Association',
+    },
+    {
+      image: './images/fiata-logo-white.png',
+      alt: 'Badge of the Fiata organisation',
+    },
+  ],
   aboutHeader: 'Swift and efficient service, with a personal touch.',
   aboutDescription: fileToHtml('home.md'),
+  buttonText: 'Get in touch!',
 }
