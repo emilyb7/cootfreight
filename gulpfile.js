@@ -34,6 +34,7 @@ const BUILD = 'build'
 const CLEAN = 'clean'
 const COPY_FONTS = 'copyfonts'
 const COPY_IMAGES = 'copyimages'
+const COPY_FAVICON = 'copyfavicon'
 
 /* tasks */
 gulp.task(CLEAN, () => {
@@ -50,6 +51,11 @@ gulp.task(COPY_IMAGES, () => {
   const srcPath = path.join(SRC, IMAGES, '*.png')
   const destPath = path.join(PUBLIC, IMAGES)
   return gulp.src(srcPath).pipe(gulp.dest(destPath))
+})
+
+gulp.task(COPY_FAVICON, () => {
+  const srcPath = path.join(SRC, 'favicon.ico')
+  return gulp.src(srcPath).pipe(gulp.dest(PUBLIC))
 })
 
 gulp.task(PUG, () => {
@@ -92,10 +98,14 @@ gulp.task(BROWSERSYNC, () => {
   })
 })
 
-gulp.task(WATCH, [ BROWSERSYNC, COPY_FONTS, COPY_IMAGES, PUG, CSS, ], () => {
-  gulp.watch(path.join(SRC, TEMPLATES, '**', '*.pug'), [ PUG, ])
-  gulp.watch(path.join(SRC, CONTENT, '**', '*.js'), [ PUG, ])
-  gulp.watch(path.join(SRC, STYLES, '*.css'), [ CSS, ])
-})
+gulp.task(
+  WATCH,
+  [ BROWSERSYNC, COPY_FONTS, COPY_IMAGES, COPY_FAVICON, PUG, CSS, ],
+  () => {
+    gulp.watch(path.join(SRC, TEMPLATES, '**', '*.pug'), [ PUG, ])
+    gulp.watch(path.join(SRC, CONTENT, '**', '*.js'), [ PUG, ])
+    gulp.watch(path.join(SRC, STYLES, '*.css'), [ CSS, ])
+  }
+)
 
-gulp.task(BUILD, [ CLEAN, COPY_FONTS, COPY_IMAGES, PUG, CSS, ])
+gulp.task(BUILD, [ CLEAN, COPY_FONTS, COPY_IMAGES, COPY_FAVICON, PUG, CSS, ])
