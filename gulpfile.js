@@ -1,3 +1,6 @@
+/* eslint-disable no-console */
+
+const del = require('del')
 const path = require('path')
 const gulp = require('gulp')
 const pug = require('gulp-pug')
@@ -20,16 +23,23 @@ const STYLES = 'styles'
 const TEMPLATES = 'templates'
 const FONTS = 'fonts'
 const IMAGES = 'images'
+const CONTENT = 'content'
 
 /* task names */
 const PUG = 'pug'
 const CSS = 'css'
 const BROWSERSYNC = 'browsersync'
 const WATCH = 'watch'
+const BUILD = 'build'
+const CLEAN = 'clean'
 const COPY_FONTS = 'copyfonts'
 const COPY_IMAGES = 'copyimages'
 
 /* tasks */
+gulp.task(CLEAN, () => {
+  return del(PUBLIC)
+})
+
 gulp.task(COPY_FONTS, () => {
   const srcPath = path.join(SRC, FONTS, '*.ttf')
   const destPath = path.join(PUBLIC, FONTS)
@@ -84,5 +94,8 @@ gulp.task(BROWSERSYNC, () => {
 
 gulp.task(WATCH, [ BROWSERSYNC, COPY_FONTS, COPY_IMAGES, PUG, CSS, ], () => {
   gulp.watch(path.join(SRC, TEMPLATES, '**', '*.pug'), [ PUG, ])
+  gulp.watch(path.join(SRC, CONTENT, '**', '*.js'), [ PUG, ])
   gulp.watch(path.join(SRC, STYLES, '*.css'), [ CSS, ])
 })
+
+gulp.task(BUILD, [ CLEAN, COPY_FONTS, COPY_IMAGES, PUG, CSS, ])

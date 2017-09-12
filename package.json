@@ -6,13 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "pre-deploy":
-      "git checkout -B gh-pages && git add -f public/ && git commit -m \"deploy\"",
+      "git checkout -B gh-pages && gulp build && git add -f public/ && git commit -m \"deploy\"",
     "deploy": "npm run pre-deploy && git push -f origin gh-pages"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.18.13",
+    "del": "^3.0.0",
     "eslint": "^4.6.1",
     "eslint-config-prettier": "^2.4.0",
     "eslint-plugin-prettier": "^2.2.0",
