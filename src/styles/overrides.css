@@ -5,3 +5,17 @@
 .shadow-6 {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.5);
 }
+
+.top-05 {
+  top: 1.5rem;
+}
+
+@media only screen and (min-width: 30em) {
+  .top-05-ns {
+    top: 1.5rem;
+  }
+
+  .coot {
+    height: 5.5rem;
+  }
+}
