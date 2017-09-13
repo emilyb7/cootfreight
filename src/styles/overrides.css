@@ -1,17 +1,7 @@
+/* override tachyons classes + media queries */
+
 .lh-title {
   line-height: 1.5;
-}
-
-.shadow-6 {
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.5);
-}
-
-.top-05 {
-  top: 1.5rem;
-}
-
-.tracked-medium {
-  letter-spacing: 0.06em;
 }
 
 @media only screen and (min-width: 30em) {

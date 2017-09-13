@@ -1,0 +1,29 @@
+/* this sheet is for additional classes not part of the standard tachyons library */
+
+.w-90vw {
+  width: 90vw;
+}
+
+.w-40vw {
+  width: 40vw;
+}
+
+.h-90vw {
+  height: 90vw;
+}
+
+.h-40vw {
+  height: 40vw;
+}
+
+.shadow-6 {
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+.top-05 {
+  top: 1.5rem;
+}
+
+.tracked-medium {
+  letter-spacing: 0.06em;
+}
