@@ -5,19 +5,31 @@ include ../mixins/snippets
 block content
     include ../partials/header
     
-    #contact-content.pa3.pa5-ns
-    
-        +subheading(view.headline)
+    #contact-content.pa3.pa5-ns.f3-ns
         
-        #contact_phone-email.from-markdown.mv4.tracked.white!=view.phoneEmail
-        
-        #contact_office-hours.from-markdown.mv4.tracked!=view.officeHours
-        
-        #map_container.h5.w-100.bg-blue
+        section#contact_top.mt4.flex.flex-wrap
           
-        #contact_address.from-markdown.mv4.tracked!=view.address
+            #contact_top-col1.w-100.w-50-ns
+              
+                +subheading(view.headline)
         
-        #contact_legal-details.from-markdown.mv4.tracked.f7.lh-copy!=view.legalDetails
+                #contact_phone-email.from-markdown.mv4.tracked.white!=view.phoneEmail
+                
+                #contact_office-hours.from-markdown.mv4.tracked!=view.officeHours
+                
+            #contact_top-col2.w-100.w-50-ns
+            
+                #map_container.h5.w-100.bg-blue
+                  
+        section#contact_bottom.flex.flex-wrap.row-reverse-ns
+          
+            #contact_bottom-col1.w-100.w-50-ns
+          
+                #contact_address.from-markdown.mv4.tracked!=view.address
+                
+            #contact_bottom-col1.w-100.w-50-ns
+        
+                #contact_legal-details.from-markdown.mv4.tracked.f7.f5-ns.lh-copy!=view.legalDetails
         
         #link-to-home.white.mv4
             | <  
