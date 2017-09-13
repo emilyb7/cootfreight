@@ -1,6 +1,6 @@
 mixin headerLink(text, link, isHiddenMobile)
     - const display = isHiddenMobile ? 'dn dib-ns ' : 'dib '
-    - const linkStyling = view && view.view && view.view === text ? 'red ' : 'black no-underline '
+    - const linkStyling = view && view.view && view.view === text.split(' ')[0] ? 'red ' : 'black no-underline '
     a.ml5(class=display + linkStyling href=link)=text
 
 header.bg-white.pt3.pt4-ns.pb4.pr3.pr5-ns.flex.justify-end.f6.f4-ns.tracked.ttc

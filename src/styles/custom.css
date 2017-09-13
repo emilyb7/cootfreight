@@ -30,13 +30,23 @@ input {
   -webkit-text-stroke-color: white;
 }
 
+.from-markdown p {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.from-markdown a {
+  color: white;
+}
+
+#contact_phone-email p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 @media only screen and (min-width: 30em) {
   .home-headline-1,
   .home-headline-2 {
     -webkit-text-stroke-width: 3px;
   }
-}
-
-.from-markdown p {
-  margin: 0.25rem;
 }

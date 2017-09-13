@@ -1,5 +1,6 @@
 module.exports = {
   pageTitle: 'Specialist freight forwarder - UK and Russia - Coot Freight Ltd',
+  linkToHome: 'Back to home',
   footer: {
     links: [
       {
