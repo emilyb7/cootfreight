@@ -9,6 +9,7 @@ const rename = require('gulp-rename')
 const cleanCSS = require('gulp-clean-css')
 const concatCss = require('gulp-concat-css')
 const data = require('gulp-data')
+const wait = require('gulp-wait')
 const browserSync = require('browser-sync').create()
 
 /* content to be injected into pug templates */
@@ -84,6 +85,7 @@ gulp.task(PUG, () => {
     .pipe(pug({ pretty: true, }))
     .pipe(rename(path => renamePug(path)))
     .pipe(gulp.dest(PUBLIC))
+    .pipe(wait(1000))
     .pipe(
       browserSync.reload({
         stream: true,

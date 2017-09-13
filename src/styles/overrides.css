@@ -1,7 +1,23 @@
+/* override tachyons classes + media queries */
+
 .lh-title {
   line-height: 1.5;
 }
 
-.shadow-6 {
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.5);
+@media only screen and (min-width: 30em) {
+  .top-05-ns {
+    top: 1.5rem;
+  }
+
+  .tracked-medium-ns {
+    letter-spacing: 0.06em;
+  }
+
+  .coot {
+    height: 5.5rem;
+  }
+
+  .row-reverse-ns {
+    flex-direction: row-reverse;
+  }
 }

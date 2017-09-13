@@ -1,4 +1,10 @@
-header.bg-white.pt3.pb4.flex.justify-end.pr3.f6.tracked
-    a(href="./contact").black.no-underline Contact Us
+mixin headerLink(text, link, isHiddenMobile)
+    - const display = isHiddenMobile ? 'dn dib-ns ' : 'dib '
+    - const linkStyling = view && view.view && view.view === text ? 'red ' : 'black no-underline '
+    a.ml5(class=display + linkStyling href=link)=text
+
+header.bg-white.pt3.pt4-ns.pb4.pr3.pr5-ns.flex.justify-end.f6.f4-ns.tracked.ttc
+    +headerLink('home', "./", true)
+    +headerLink('contact us', './contact')
     a(href="./" title="home")
-        img.h3.absolute.left-1.top-1(src="./images/logo-small.png" alt="Coot logo")
+        img.coot.h3.absolute.left-1.top-1.top-05-ns(src="./images/logo-small.png" alt="Coot logo")

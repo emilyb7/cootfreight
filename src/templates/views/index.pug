@@ -1,40 +1,51 @@
 extends ../layout/base
 include ../mixins/snippets
 
-
 mixin headline(text)
     - const [ part1, part2, ] = text.split(' ')
-    h1.white.ttu.b.tracked.lh-solid
+    h1.mv2.white.ttu.b.fw8-ns.tracked.lh-solid.f1-ns
       span.home-headline-1=part1 + ' '
       span.home-headline-2=part2
       
 mixin linkImage(image)
     - const src = './images/' + image + '.png'
-    img.h3(src=src)
+    img.h3.h4-ns(src=src)
+      
+mixin pageLinkTile (link, index)
+    //--link object consists of URL, image and text 
+    a.no-underline.black.ttu.b.mv3-ns.tc.tracked.pointer(href=link.link)
+        .page_link_box.pa3.h-40vw.h5-ns.w-40vw.w5-ns.flex.items-center.flex-column.justify-around.br3.shadow-6.pointer(class=`bg-${linkColors[index]}`)
+            +linkImage(link.image)
+            span.f3-ns=link.text
+    
       
 mixin subheading(text)
-    h2.b.f5.lh-title.tracked.near-black=text
+    h2.mv3.mv4-ns.b.f5.f3-ns.lh-title.tracked.near-black=text
+    
+mixin badge(image, alt)
+    img.h-100(src=image alt=alt)
 
 block content
+    include ../partials/header
+    
     - const linkColors = ['washed-green', 'blue', 'light-green', 'pink', ]
 
-    #home_content.pa3
+    #home-content.pa3.pa5-ns
         +headline(view.headline)
         +subheading(view.tagline)
         
-        #page-links
+        #page-links.flex.content-between.justify-between.flex-wrap.w-90vw.w-auto-ns.h-90vw.h-auto-ns
             for link, index in view.pageLinks
-              a.no-underline.black.ttu.b.inline-flex.ma2.tc.tracked.pointer(href=link.link)
-                  .page_link_box.pa3.h4.w4.flex.items-center.flex-column.justify-around.br3.shadow-6.pointer(class=`bg-${linkColors[index]}`)
-                      +linkImage(link.image)
-                      span=link.text
+              +pageLinkTile(link, index)
                       
         +subheading(view.aboutHeader)
-        #about.from-markdown.mv3.f6.lh-copy.fw3
+        #about.from-markdown.mv3.ma0-ns.f6.f4-ns.lh-copy.fw3.fw4-ns
             != `${view.aboutDescription}`
             
-        #badges.h4.w-100.tc
-            img.w-40.mr3.inline-flex(src=view.badges[0].image alt=view.badges[0].alt)
-            img.w-40.ml3.inline-flex(src=view.badges[1].image alt=view.badges[1].alt)
+        section#lower_section.flex.flex-wrap.justify-between.items-center
+            
+            #badges.h4.w-100.w-30-ns.mv5-ns.tc.flex.justify-between
+                +badge(view.badges[0].image, view.badges[0].alt)
+                +badge(view.badges[1].image, view.badges[1].alt)
         
-        +ctaButton('./contact', view.buttonText)
+            +ctaButton('./contact', view.buttonText)

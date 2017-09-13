@@ -1,6 +1,7 @@
 const { fileToHtml, } = require('../../utils.js')
 
 module.exports = {
+  view: 'home',
   headline: 'Coot Freight',
   tagline: 'Specialist freight forwarder to/from Russia.',
   pageLinks: [
