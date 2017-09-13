@@ -11,6 +11,14 @@ mixin linkImage(image)
     - const src = './images/' + image + '.png'
     img.h3.h4-ns(src=src)
       
+mixin pageLinkTile (link, index)
+    //--link object consists of URL, image and text 
+    a.no-underline.black.ttu.b.mv3-ns.tc.tracked.pointer(href=link.link)
+        .page_link_box.pa3.h-40vw.h5-ns.w-40vw.w5-ns.flex.items-center.flex-column.justify-around.br3.shadow-6.pointer(class=`bg-${linkColors[index]}`)
+            +linkImage(link.image)
+            span.f3-ns=link.text
+    
+      
 mixin subheading(text)
     h2.mv3.mv4-ns.b.f5.f3-ns.lh-title.tracked.near-black=text
     
@@ -22,16 +30,13 @@ block content
     
     - const linkColors = ['washed-green', 'blue', 'light-green', 'pink', ]
 
-    #home_content.pa3.pa5-ns
+    #home-content.pa3.pa5-ns
         +headline(view.headline)
         +subheading(view.tagline)
         
         #page-links.flex.content-between.justify-between.flex-wrap.w-90vw.w-auto-ns.h-90vw.h-auto-ns
             for link, index in view.pageLinks
-              a.no-underline.black.ttu.b.mv3-ns.tc.tracked.pointer(href=link.link)
-                  .page_link_box.pa3.h-40vw.h5-ns.w-40vw.w5-ns.flex.items-center.flex-column.justify-around.br3.shadow-6.pointer(class=`bg-${linkColors[index]}`)
-                      +linkImage(link.image)
-                      span.f3-ns=link.text
+              +pageLinkTile(link, index)
                       
         +subheading(view.aboutHeader)
         #about.from-markdown.mv3.ma0-ns.f6.f4-ns.lh-copy.fw3.fw4-ns
