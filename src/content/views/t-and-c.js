@@ -5,4 +5,5 @@ module.exports = {
   view: 't-and-c',
   headline: 'Our Ts & Cs',
   body: fileToHtml('t-and-c.md'),
+  cta: 'Make an enquiry',
 }

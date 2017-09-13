@@ -5,4 +5,5 @@ module.exports = {
   pageTitle: 'Air freight | Coot Freight Ltd',
   headline: 'Air freight',
   body: fileToHtml('air-freight.md'),
+  cta: 'Get a quote!',
 }
