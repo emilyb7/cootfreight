@@ -1,9 +1,9 @@
 mixin ctaButton(link, text)
-    form(action=link).w-100.w-50-ns.pv2
-        input(type="submit" value=text).bg-red.white.pa2.w-100.w-90-ns.f4.f2-ns.shadow-6.lh-title.tracked.pointer
+    form(action=link).w-100.pv2.tc
+        input(type="submit" value=text).bg-red.white.pa2.w-100.mw6.f4.f2-ns.shadow-6.lh-title.tracked.pointer
 
 mixin subheading(text)
-    h2.b.f5.f2-ns.lh-title.tracked.near-black=text
+    h2.b.f4.f2-ns.lh-title.tracked.near-black=text
     
 mixin markdownContent(id, content)
     div(id=id).from-markdown.from-markdown.mv2.tracked.lh-copy!=content
