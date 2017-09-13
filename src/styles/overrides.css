@@ -16,4 +16,8 @@
   .coot {
     height: 5.5rem;
   }
+
+  .row-reverse-ns {
+    flex-direction: row-reverse;
+  }
 }
