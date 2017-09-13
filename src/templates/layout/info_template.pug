@@ -1,0 +1,17 @@
+extends ../layout/base
+
+include ../mixins/snippets
+
+block content
+    include ../partials/header
+    
+    .template-content.pa3.pt4.pa5-ns.f3-ns.flex.flex-column
+      
+        section.template_top.flex.flex-wrap
+          
+            block top
+        
+        section.template_bottom.w-100.flex.justify-center.pt4.pb5      
+            +ctaButton('./contact', 'Get a quote!')
+        
+        +linkToHome()
