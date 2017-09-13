@@ -7,12 +7,22 @@ block content
     
     #air-freight-content.pa3.pt4.pa5-ns.f3-ns.flex.flex-column
       
-        +subheading(view.headline)
-        
-        +markdownContent("air-freight_body", view.body)
-        
-        img.w-70.self-center(src='./images/travel.png' alt="image of an airplane traveling around the world")
+        section#air-freight_top.flex.flex-wrap
           
-        +ctaButton('./contact', 'Get a quote!')
+            #air-freight_top_col-1.pl5-ns.w-50-ns
+    
+                +subheading(view.headline)
+            
+                #air-freight_top-content.pv3
+            
+                    +markdownContent("air-freight_body", view.body)
+                
+            #air-freight_top_col-2.w-50-ns.h5-ns.tc-ns.mb5-ns
+            
+                img.w-70.w-auto-ns.h-100-ns.self-center(src='./images/travel.png' alt="image of an airplane traveling around the world")
+        
+        
+        section#air-freight_bottom.w-100.flex.justify-center.pb5      
+            +ctaButton('./contact', 'Get a quote!')
         
         +linkToHome()
