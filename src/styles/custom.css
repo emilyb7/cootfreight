@@ -3,6 +3,11 @@ body {
   background-color: #66cccc;
 }
 
+h1,
+h2 {
+  margin: 0;
+}
+
 input {
   outline: none;
   border: 0;
@@ -21,6 +26,13 @@ input {
   -webkit-text-fill-color: black;
   -webkit-text-stroke-width: 1.5px;
   -webkit-text-stroke-color: white;
+}
+
+@media only screen and (min-width: 30em) {
+  .home-headline-1,
+  .home-headline-2 {
+    -webkit-text-stroke-width: 3px;
+  }
 }
 
 .from-markdown p {
