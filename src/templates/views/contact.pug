@@ -2,6 +2,9 @@ extends ../layout/base
 
 include ../mixins/snippets
 
+prepend title
+    title=view.pageTitle
+
 block content
     include ../partials/header
     
