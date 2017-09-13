@@ -20,6 +20,7 @@
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.8.0",
     "gulp-concat-css": "^2.3.0",
+    "gulp-data": "^1.2.1",
     "gulp-pug": "^3.3.0",
     "gulp-rename": "^1.2.2",
     "markdown": "^0.5.0",
