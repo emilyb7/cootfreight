@@ -8,5 +8,4 @@ module.exports = {
   officeHours: fileToHtml('contact_office-hours.md'),
   legalDetails: fileToHtml('contact_legal-details.md'),
   address: fileToHtml('contact_address.md'),
-  linkToHome: 'Back to home',
 }
