@@ -3,7 +3,7 @@ include ../mixins/snippets
 
 mixin headline(text)
     - const [ part1, part2, ] = text.split(' ')
-    h1.mv2.white.ttu.b.fw8-ns.tracked.lh-solid.f1-ns
+    h1.mv3.white.ttu.b.fw8-ns.tracked.lh-solid.f1-ns
       span.home-headline-1=part1 + ' '
       span.home-headline-2=part2
       
@@ -30,13 +30,14 @@ block content
         +headline(view.headline)
         +subheading(view.tagline)
         
-        #page-links.flex.content-between.justify-between.flex-wrap.w-90vw.w-auto-ns.h-90vw.h-auto-ns
+        #page-links.flex.content-between.justify-between.flex-wrap.w-90vw.w-auto-ns.h-90vw.h-auto-ns.mt3
             for link, index in view.pageLinks
               +pageLinkTile(link, index)
-                      
-        +subheading(view.aboutHeader)
-        #about.from-markdown.mv3.ma0-ns.f6.f4-ns.lh-copy.fw3.fw4-ns
-            != `${view.aboutDescription}`
+        
+        section#about.mt4             
+            +subheading(view.aboutHeader)
+            #about_description.from-markdown.mv3.mt0-ns.f6.f4-ns.lh-copy.fw3.fw4-ns
+                != `${view.aboutDescription}`
             
         section#lower_section.flex.flex-wrap.justify-between.items-center
             
