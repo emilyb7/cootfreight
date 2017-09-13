@@ -1,3 +1,6 @@
 mixin ctaButton(link, text)
     form(action=link).w-100.w-50-ns.mv5
         input(type="submit" value=text).bg-red.white.pa2.w-100.w-90-ns.f4.f2-ns.shadow-6.lh-title.tracked.pointer
+
+mixin subheading(text)
+    h2.mv3.mv4-ns.b.f5.f3-ns.lh-title.tracked.near-black=text

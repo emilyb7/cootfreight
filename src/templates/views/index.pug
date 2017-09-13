@@ -17,11 +17,7 @@ mixin pageLinkTile (link, index)
         .page_link_box.pa3.h-40vw.h5-ns.w-40vw.w5-ns.flex.items-center.flex-column.justify-around.br3.shadow-6.pointer(class=`bg-${linkColors[index]}`)
             +linkImage(link.image)
             span.f3-ns=link.text
-    
-      
-mixin subheading(text)
-    h2.mv3.mv4-ns.b.f5.f3-ns.lh-title.tracked.near-black=text
-    
+
 mixin badge(image, alt)
     img.h-100(src=image alt=alt)
 
