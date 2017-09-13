@@ -1,6 +1,14 @@
 mixin ctaButton(link, text)
-    form(action=link).w-100.w-50-ns.mv5
+    form(action=link).w-100.w-50-ns.pv2
         input(type="submit" value=text).bg-red.white.pa2.w-100.w-90-ns.f4.f2-ns.shadow-6.lh-title.tracked.pointer
 
 mixin subheading(text)
     h2.b.f5.f3-ns.lh-title.tracked.near-black=text
+    
+mixin markdownContent(id, content)
+    div(id=id).from-markdown.from-markdown.mv2.tracked.lh-copy!=content
+    
+mixin linkToHome()
+    .link-to-home.white.pv3
+        | <  
+        a(href='./').ml2.white.tracked.underline='Back to home'

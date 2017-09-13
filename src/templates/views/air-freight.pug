@@ -1,1 +1,18 @@
 extends ../layout/base
+
+include ../mixins/snippets
+
+block content
+    include ../partials/header
+    
+    #air-freight-content.pa3.pt4.pa5-ns.f3-ns.flex.flex-column
+      
+        +subheading(view.headline)
+        
+        +markdownContent("air-freight_body", view.body)
+        
+        img.w-70.self-center(src='./images/travel.png' alt="image of an airplane traveling around the world")
+          
+        +ctaButton('./contact', 'Get a quote!')
+        
+        +linkToHome()
