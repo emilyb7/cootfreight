@@ -12,7 +12,7 @@ mixin linkImage(image)
     img.h3.h4-ns(src=src)
       
 mixin subheading(text)
-    h2.mv2.mv4-ns.b.f5.f3-ns.lh-title.tracked.near-black=text
+    h2.mv3.mv4-ns.b.f5.f3-ns.lh-title.tracked.near-black=text
     
 mixin badge(image, alt)
     img.h-100(src=image alt=alt)
@@ -26,10 +26,10 @@ block content
         +headline(view.headline)
         +subheading(view.tagline)
         
-        #page-links.flex.justify-between.flex-wrap
+        #page-links.flex.content-between.justify-between.flex-wrap.w-90vw.w-auto-ns.h-90vw.h-auto-ns
             for link, index in view.pageLinks
               a.no-underline.black.ttu.b.mv3-ns.tc.tracked.pointer(href=link.link)
-                  .page_link_box.pa3.h4.h5-ns.w4.w5-ns.flex.items-center.flex-column.justify-around.br3.shadow-6.pointer(class=`bg-${linkColors[index]}`)
+                  .page_link_box.pa3.h-40vw.h5-ns.w-40vw.w5-ns.flex.items-center.flex-column.justify-around.br3.shadow-6.pointer(class=`bg-${linkColors[index]}`)
                       +linkImage(link.image)
                       span.f3-ns=link.text
                       
@@ -40,7 +40,7 @@ block content
         section#lower_section.flex.flex-wrap.justify-between.items-center
             
             #badges.h4.w-100.w-30-ns.mv5-ns.tc.flex.justify-between
-                +badge(view.badges[0].image, view.badges[0].alt).w-45
+                +badge(view.badges[0].image, view.badges[0].alt)
                 +badge(view.badges[1].image, view.badges[1].alt)
         
             +ctaButton('./contact', view.buttonText)
