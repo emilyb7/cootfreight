@@ -1,3 +1,16 @@
 extends ../layout/info_with_map
 
 prepend title
+    title=view.title
+    
+block subheading
+    +subheading(view.headline)
+    
+block columns
+    p blah
+    
+block images
+    img.vh-75-ns(src="./images/road-map.png" alt="road map of Europe")
+
+block bottom 
+     +ctaButton(view.cta)
