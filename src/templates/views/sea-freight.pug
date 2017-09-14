@@ -1,1 +1,24 @@
-extends ../layout/base
+extends ../layout/info_template
+
+prepend title 
+    title=view.pageTitle
+
+block top
+  
+    - const [contentPart1, contentPart2] = view.body.split('BREAK;')
+    
+    #sea-freight_top_col-1.pl5-ns.w-50-ns
+
+        +subheading(view.headline)
+
+        #sea-freight_list-1.pv3
+            +markdownContent("sea-freight_body1", contentPart1)
+        
+    #sea-freight_top_col-2.w-50-ns
+         
+         #sea-freight_list-2.pv3
+            +markdownContent("sea-freight_body2", contentPart2)
+
+
+block bottom
+    +ctaButton('./contact', view.cta)
