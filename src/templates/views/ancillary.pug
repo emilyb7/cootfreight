@@ -1,1 +1,18 @@
-extends ../layout/base
+extends ../layout/info_template
+
+block top
+  
+  #ancillary_top_col-1.pl5-ns.w-50-ns
+
+      +subheading(view.headline)
+  
+      #ancillary_top-content.pv3
+  
+          +markdownContent("ancillary_body", view.body)
+      
+  #ancillary_top_col-2.w-50-ns.h5-ns.tc-ns.mb5-ns.pt5-ns.tc
+  
+      img.w-70.w-auto-ns.h-100-ns.self-center(src='./images/idea.png' alt="image of a hand holding a lightbulb")
+
+block bottom
+    +ctaButton('./contact', view.cta)

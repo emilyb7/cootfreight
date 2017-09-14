@@ -1,1 +1,13 @@
-extends ../layout/base
+extends ../layout/info_template
+
+block top
+  
+  #t-and-c_top.pl5-ns.f6.f5-ns
+
+      +subheading(view.headline)
+  
+      +markdownContent("ancillary_body", view.body)
+
+
+block bottom    
+    +ctaButton('./contact', view.cta)

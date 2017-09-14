@@ -1,0 +1,15 @@
+extends ../layout/base
+
+block content
+    include ../partials/header
+    
+    .template-content.pa3.pt4.pa5-ns.f3-ns.flex.flex-column
+      
+        section.template_top.flex.flex-wrap
+          
+            block top
+        
+        section.template_bottom.flex.justify-center.pt4.pb5.pl5-ns
+            block bottom
+        
+        +linkToHome()
