@@ -1,24 +1,33 @@
-extends ../layout/info_template
-
+extends ../layout/base
 prepend title 
     title=view.pageTitle
 
-block top
-  
-    - const [contentPart1, contentPart2] = view.body.split('BREAK;')
+block content
+    include ../partials/header
     
-    #sea-freight_top_col-1.pl5-ns.w-50-ns
-
-        +subheading(view.headline)
-
-        #sea-freight_list-1.pv3
-            +markdownContent("sea-freight_body1", contentPart1)
+    .template-content.pa3.pt4.pa5-ns.f3-ns.flex.flex-column
+    
+        #sea-freight_top_col-1.pl5-ns.w-50-ns
+            +subheading(view.headline)
+    
+            #sea-freight_list-1.mt3
+                +markdownContent("sea-freight_body1", view.body1)
         
-    #sea-freight_top_col-2.w-50-ns
-         
-         #sea-freight_list-2.pv3
-            +markdownContent("sea-freight_body2", contentPart2)
+        #sea-freight_top_col-2.pl5-ns.w-50-ns.mb4
+            
+            #sea-freight_list-2
+                +markdownContent("sea-freight_body2", view.body2)
+    
+    
+    #map-images.flex.flex-column.justify-center.bg-gray.w-100.pv2
+      
+        img(src='./images/sea-map-1.png').mh4.mv2.shadow-6
+        img(src='./images/sea-map-2.png').mh4.mv2.shadow-6
+        img(src='./images/sea-map-3.png').mh4.mv2.shadow-6
 
 
-block bottom
-    +ctaButton('./contact', view.cta)
+    section#sea-freight-bottom.pa4
+      
+        +ctaButton('./contact', view.cta)
+        
+        +linkToHome()
