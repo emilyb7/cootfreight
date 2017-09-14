@@ -125,6 +125,7 @@ gulp.task(
   () => {
     gulp.watch(path.join(SRC, TEMPLATES, '**', '*.pug'), [ PUG, ])
     gulp.watch(path.join(SRC, CONTENT, '**', '*.js'), [ PUG, ])
+    gulp.watch(path.join(SRC, CONTENT, 'markdown', '*.md'), [ PUG, ])
     gulp.watch(path.join(SRC, STYLES, '*.css'), [ CSS, ])
   }
 )
