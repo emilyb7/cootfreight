@@ -10,6 +10,7 @@ const cleanCSS = require('gulp-clean-css')
 const concatCss = require('gulp-concat-css')
 const data = require('gulp-data')
 const wait = require('gulp-wait')
+const insert = require('gulp-insert')
 const browserSync = require('browser-sync').create()
 
 /* content to be injected into pug templates */
@@ -28,6 +29,7 @@ const FONTS = 'fonts'
 const IMAGES = 'images'
 const CONTENT = 'content'
 const VIEWS = 'views'
+const CONFIG = 'config'
 
 /* task names */
 const PUG = 'pug'
@@ -36,9 +38,11 @@ const BROWSERSYNC = 'browsersync'
 const WATCH = 'watch'
 const BUILD = 'build'
 const CLEAN = 'clean'
+const COPY = 'copy'
 const COPY_FONTS = 'copyfonts'
 const COPY_IMAGES = 'copyimages'
 const COPY_FAVICON = 'copyfavicon'
+const PUG_PROD = 'pug_prod'
 
 /* tasks */
 gulp.task(CLEAN, () => {
@@ -51,7 +55,7 @@ gulp.task(COPY_FONTS, () => {
   return gulp.src(srcPath).pipe(gulp.dest(destPath))
 })
 
-gulp.task(COPY_IMAGES, () => {
+gulp.task(COPY_IMAGES, [ CLEAN, ], () => {
   const srcPath = path.join(SRC, IMAGES, '*.png')
   const destPath = path.join(PUBLIC, IMAGES)
   return gulp.src(srcPath).pipe(gulp.dest(destPath))
@@ -76,10 +80,8 @@ gulp.task(PUG, () => {
           VIEWS,
           filename + '.js'
         )
-        if (fs.existsSync(dataPath)) {
-          const view = require(dataPath)
-          return Object.assign({}, { view, }, locals)
-        } else return locals
+        const view = require(dataPath)
+        return Object.assign({}, { view, }, locals)
       })
     )
     .pipe(pug({ pretty: true, }))
@@ -130,4 +132,23 @@ gulp.task(
   }
 )
 
-gulp.task(BUILD, [ CLEAN, COPY_FONTS, COPY_IMAGES, COPY_FAVICON, PUG, CSS, ])
+gulp.task(PUG_PROD, [ PUG, ], () => {
+  const srcPath = path.join(PUBLIC, '*.html')
+
+  return gulp
+    .src(srcPath)
+    .pipe(
+      insert.transform((contents, file) => {
+        const filename = path.basename(file.path, '.html')
+        const configPath = path.join(__dirname, SRC, CONFIG, filename + '.yml')
+        if (fs.existsSync(configPath)) {
+          return fs.readFileSync(configPath) + contents
+        } else return contents
+      })
+    )
+    .pipe(gulp.dest(PUBLIC))
+})
+
+gulp.task(COPY, [ COPY_FONTS, COPY_IMAGES, COPY_FAVICON, ])
+
+gulp.task(BUILD, [ COPY, PUG_PROD, CSS, ])
