@@ -35,6 +35,10 @@ input {
   margin-bottom: 0.25rem;
 }
 
+.from-markdown p {
+  font-size: 0.875rem;
+}
+
 .from-markdown a {
   color: white;
 }
@@ -67,7 +71,8 @@ input {
     -webkit-text-stroke-width: 3px;
   }
 
-  .from-markdown ul {
+  .from-markdown p,
+  ul {
     font-size: 1.25rem;
     font-weight: normal;
   }
