@@ -1,4 +1,4 @@
-## Rules For Any Mode of Transport
+### Rules For Any Mode of Transport
 
 * **CIP** — Carriage and Insurance Paid to (named place of destination)
   The seller pays for carriage and insurance to the named destination point, but risk passes when the goods are handed over to the first carrier.
@@ -16,7 +16,7 @@
   The seller hands over the goods, cleared for export, into the disposal of the first carrier (named by the buyer) at the named place. The seller pays for carriage to the named point of delivery, and risk passes when the goods are handed over to the first carrier.
 
 
-## Rules for Sea and Inland Waterway Transport
+### Rules for Sea and Inland Waterway Transport
 
 * **CFR** - Cost and Freight (named port of destination)
   The seller must pay the costs and freight to bring the goods to the port of destination. However, risk is transferred to the buyer once the goods are loaded on the vessel. Maritime transport only and Insurance for the goods is not included.

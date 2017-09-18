@@ -4,5 +4,6 @@ module.exports = {
   view: 'incoterms',
   pageTitle: 'International Commercial Terms | Coot Freight Ltd',
   headline: 'International Commercial Terms',
-  cta: 'Get a quote!',
+  body: fileToHtml('incoterms.md'),
+  cta: 'Make an enquiry',
 }

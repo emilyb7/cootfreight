@@ -1,0 +1,23 @@
+extends ../layout/base
+
+prepend title
+    title=view.pageTitle
+
+block content
+    include ../partials/header
+    
+    .template-content.pa3.pt4.pa5-ns.f3-ns
+        .link-top.dn.dib-ns
+            +linkToHome()
+      
+        section.template_top.pl5-ns.pt3-ns
+            block body
+        
+        section.template_bottom.flex.justify-center.flex-column.pv3.pl5-ns
+            +ctaButton('./contact', view.cta)
+            
+            .link-bottom.dn-ns
+                +linkToHome()
+            
+        
+        

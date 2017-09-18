@@ -1,1 +1,8 @@
-extends ../layout/base
+extends ../layout/info_simple
+
+prepend title
+    title=view.pageTitle
+    
+block body
+    +subheading(view.headline)
+    +markdownContent('template_body', view.body)
