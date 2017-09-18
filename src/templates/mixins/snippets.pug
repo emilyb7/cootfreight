@@ -12,3 +12,13 @@ mixin linkToHome()
     .link-to-home.white.pv3.f3-ns
         | <  
         a(href='./').ml2.white.tracked.underline='Back to home'
+        
+mixin columns (content1, content2)
+    
+    .col-1.pl5-ns.w-50-ns
+        .list-1
+            +markdownContent("", view.body1)
+        
+    .col-2.pl5-ns.w-50-ns
+        .list-2
+            +markdownContent("", view.body2)
