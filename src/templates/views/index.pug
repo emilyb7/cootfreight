@@ -14,26 +14,23 @@ mixin linkImage(image)
 mixin pageLinkTile (link, index)
     //--link object consists of URL, image and text 
     a.no-underline.black.ttu.b.mv3-ns.tc.tracked.pointer(href=link.link)
-        .page_link_box.pa3.h-40vw.h5-ns.w-40vw.w5-ns.flex.items-center.flex-column.justify-around.br3.shadow-6.pointer(class=`bg-${linkColors[index]}`)
+        .page_link_box.pa3.h-40vw.h5-l.w-40vw.w5-l.flex.items-center.flex-column.justify-around.br3.shadow-6.pointer(class=`bg-${linkColors[index]}`)
             +linkImage(link.image)
             span.f3-ns=link.text
 
 mixin badge(image, alt)
     img.h-100(src=image alt=alt)
-      
-prepend title 
-    title=view.pageTitle
 
 block content
     include ../partials/header
     
     - const linkColors = ['washed-green', 'blue', 'light-green', 'pink', ]
 
-    #home-content.pb5.pa3.pa5-ns
+    #home-content.pb5.pa3.pa5-ns.mw9
         +headline(view.headline)
         +subheading(view.tagline)
         
-        #page-links.flex.content-between.justify-between.flex-wrap.w-90vw.w-auto-ns.h-90vw.h-auto-ns.mt3
+        #page-links.flex.content-between.justify-between.flex-wrap.w-90vw.w-auto-l.h-90vw.h-auto-l.mt3
             for link, index in view.pageLinks
               +pageLinkTile(link, index)
         
@@ -47,5 +44,6 @@ block content
             #badges.h4.w-100.w-30-ns.mv4.mv5-ns.tc.flex.justify-between
                 +badge(view.badges[0].image, view.badges[0].alt)
                 +badge(view.badges[1].image, view.badges[1].alt)
-        
-            +ctaButton('./contact', view.buttonText)
+                
+            #cta.w-100.w-auto-m.w-60-l
+                +ctaButton('./contact', view.buttonText)
