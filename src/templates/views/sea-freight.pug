@@ -1,1 +1,18 @@
-extends ../layout/base
+extends ../layout/info_with_map
+
+prepend title 
+    title=view.pageTitle
+    
+block subheading
+    +subheading(view.headline)
+    
+block columns
+    +columns(view.body1, view.body1)
+    
+block images
+    mixin mapImage(url, alt)
+        img(src=url alt=alt).mh4.mv2.shadow-6
+    
+    +mapImage('./images/sea-map-1.png', 'sea map of Europe, Asia and Africa')
+    +mapImage('./images/sea-map-2.png', 'sea map of Europe')
+    +mapImage('./images/sea-map-3.png', 'sea map of Europe, Africa and North America')

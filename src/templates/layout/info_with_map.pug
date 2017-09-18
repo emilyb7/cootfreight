@@ -1,0 +1,23 @@
+extends ../layout/base
+
+block content
+  
+    include ../partials/header
+    
+    .template-content.pa3.pt4.pa5-ns.f3-ns
+        block subheading        
+            
+        section.template_top.flex.flex-wrap.pt3
+            
+            block columns
+    
+    #map-images.flex.flex-column.flex-row-ns.justify-center.justify-around-ns.bg-gray.w-100.pv2
+        block images
+
+    section.template-bottom.pa4.flex.flex-wrap.row-reverse-ns
+      
+        .col1.w-100.w-50-ns.flex.flex-column.justify-end
+            +ctaButton("./contact", view.cta)
+        
+        .col2.w-100.w-50-ns.flex.flex-column.justify-end
+            +linkToHome()

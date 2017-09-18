@@ -1,1 +1,15 @@
-extends ../layout/base
+extends ../layout/info_with_map
+
+
+prepend title
+    title=view.title
+    
+block subheading
+    +subheading(view.headline)
+    
+block columns
+    +columns(view.body1, view.body1)
+    
+block images
+    img.pa3.vh-75-ns(src="./images/road-map.png" alt="road map of Europe")
+     
