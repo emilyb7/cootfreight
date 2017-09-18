@@ -35,6 +35,10 @@ input {
   margin-bottom: 0.25rem;
 }
 
+.from-markdown p {
+  font-size: 0.875rem;
+}
+
 .from-markdown a {
   color: white;
 }
@@ -52,6 +56,10 @@ input {
   font-size: 0.8rem;
 }
 
+.from-markdown h3 {
+  font-size: 1rem;
+}
+
 #contact_phone-email p {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -63,8 +71,13 @@ input {
     -webkit-text-stroke-width: 3px;
   }
 
-  .from-markdown ul {
+  .from-markdown p,
+  ul {
     font-size: 1.25rem;
     font-weight: normal;
+  }
+
+  .from-markdown h3 {
+    font-size: 1.5rem;
   }
 }
