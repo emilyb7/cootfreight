@@ -142,7 +142,8 @@ gulp.task(PUG_PROD, [ PUG, ], () => {
         const filename = path.basename(file.path, '.html')
         const configPath = path.join(__dirname, SRC, CONFIG, filename + '.yml')
         if (fs.existsSync(configPath)) {
-          return fs.readFileSync(configPath) + contents
+          console.log(fs.readFileSync(configPath))
+          return fs.readFileSync(configPath).toString() + contents
         } else return contents
       })
     )
