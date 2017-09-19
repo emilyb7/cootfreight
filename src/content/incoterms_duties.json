@@ -1,0 +1,206 @@
+{
+  "headers": [
+    "Incoterm",
+    "Loading on truck",
+    "Export customs clearance",
+    "Carriage to port of export",
+    "Unloading of truck in port of export",
+    "Loading charges in port of export",
+    "Carriage to port of import",
+    "Unloading charges in port of import",
+    "Loading on truck in port of import",
+    "Carriage to place of destination",
+    "Insurance",
+    "Import customs clearance",
+    "Import taxes"
+  ],
+  "rows": [
+    {
+      "type": "EXW",
+      "values": [
+        "Buyer",
+        "Buyer",
+        "Buyer",
+        "Buyer",
+        "Buyer",
+        "Buyer",
+        "Buyer",
+        "Buyer",
+        "Buyer",
+        "Buyer",
+        "Buyer",
+        "Buyer"
+      ]
+    },
+    {
+      "type": "FCA",
+      "values": [
+        "Seller",
+        "Seller",
+        "Seller",
+        "Buyer",
+        "Buyer",
+        "Buyer",
+        "Buyer",
+        "Buyer",
+        "Buyer",
+        "Buyer",
+        "Buyer",
+        "Buyer"
+      ]
+    },
+    {
+      "type": "FAS",
+      "values": [
+        "Seller",
+        "Seller",
+        "Seller",
+        "Seller",
+        "Buyer",
+        "Buyer",
+        "Buyer",
+        "Buyer",
+        "Buyer",
+        "Buyer",
+        "Buyer",
+        "Buyer"
+      ]
+    },
+    {
+      "type": "FOB",
+      "values": [
+        "Seller",
+        "Seller",
+        "Seller",
+        "Seller",
+        "Seller",
+        "Buyer",
+        "Buyer",
+        "Buyer",
+        "Buyer",
+        "Buyer",
+        "Buyer",
+        "Buyer"
+      ]
+    },
+    {
+      "type": "CFR",
+      "values": [
+        "Seller",
+        "Seller",
+        "Seller",
+        "Seller",
+        "Seller",
+        "Seller",
+        "Buyer",
+        "Buyer",
+        "Buyer",
+        "Buyer",
+        "Buyer",
+        "Buyer"
+      ]
+    },
+    {
+      "type": "CIF",
+      "values": [
+        "Seller",
+        "Seller",
+        "Seller",
+        "Seller",
+        "Seller",
+        "Seller",
+        "Buyer",
+        "Buyer",
+        "Buyer",
+        "Seller",
+        "Buyer",
+        "Buyer"
+      ]
+    },
+    {
+      "type": "DAT",
+      "values": [
+        "Seller",
+        "Seller",
+        "Seller",
+        "Seller",
+        "Seller",
+        "Seller",
+        "Seller",
+        "Buyer",
+        "Buyer",
+        "Seller",
+        "Buyer",
+        "Buyer"
+      ]
+    },
+    {
+      "type": "DAP",
+      "values": [
+        "Seller",
+        "Seller",
+        "Seller",
+        "Seller",
+        "Seller",
+        "Seller",
+        "Seller",
+        "Seller",
+        "Seller",
+        "Seller",
+        "Buyer",
+        "Buyer"
+      ]
+    },
+    {
+      "type": "CPT",
+      "values": [
+        "Seller",
+        "Seller",
+        "Seller",
+        "Seller",
+        "Seller",
+        "Seller",
+        "Seller",
+        "Seller",
+        "Seller",
+        "Buyer",
+        "Buyer",
+        "Buyer"
+      ]
+    },
+    {
+      "type": "CIP",
+      "values": [
+        "Seller",
+        "Seller",
+        "Seller",
+        "Seller",
+        "Seller",
+        "Seller",
+        "Seller",
+        "Seller",
+        "Seller",
+        "Seller",
+        "Buyer",
+        "Buyer"
+      ]
+    },
+    {
+      "type": "CIP",
+      "values": [
+        "Seller",
+        "Seller",
+        "Seller",
+        "Seller",
+        "Seller",
+        "Seller",
+        "Seller",
+        "Seller",
+        "Seller",
+        "Seller",
+        "Seller",
+        ""
+      ]
+    }
+  ]
+}

@@ -7,4 +7,22 @@ block body
     +subheading(view.headline)
     +markdownContent("incoterms_body", view.body)    
         
+block table 
+    h3.tracked.f3.fw6=view.tableHeading
+    
+    table
+        thead.f7
+            tr.bg-gray.white
+                for header in view.table.headers
+                    th.normal.mh1.pa2=header
+                    
+        tbody.f6.gray
+            for row in view.table.rows
+                tr.bg-white.tc
+                    td.mh1.bg-light-gray=row.type
+                    for value in row.values
+                        - const color = value === 'Buyer' ? 'pink' : value === 'Seller' ? 'light-blue' : 'light-gray'
+                        td.mh1.pa2(class=`bg-${color}`)=value
+    
+    
         
