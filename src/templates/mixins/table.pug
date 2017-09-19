@@ -10,6 +10,7 @@ mixin table(table)
                         +th(head.top_heading, head.subheadings.length)
                     else 
                         +th(head.top_heading, 0)
+                        
             tr.bg-washed-green
                 for head in table.table_headings
                     if head.subheadings
@@ -17,6 +18,8 @@ mixin table(table)
                             +th(sub, 0)
                     else 
                             +th("", 0)
+                  
+                
         tbody.f6
             for type, i in table.container_types
                 tr(class=`bg-${i % 2 ? "washed-green" : "white"}`)
