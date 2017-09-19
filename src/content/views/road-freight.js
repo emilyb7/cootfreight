@@ -6,5 +6,7 @@ module.exports = {
   headline: 'Road freight',
   body1: fileToHtml('road-freight_1.md'),
   body2: fileToHtml('road-freight_2.md'),
+  table: require('../trailer_dimensions.json'),
+  tableHeading: 'Trailer dimensions',
   cta: 'Get a quote!',
 }

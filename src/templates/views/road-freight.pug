@@ -2,7 +2,7 @@ extends ../layout/info_with_map
 
 
 prepend title
-    title=view.title
+    title=view.pageTitle
     
 block subheading
     +subheading(view.headline)
@@ -13,3 +13,8 @@ block columns
 block images
     img.pa3.vh-75-ns(src="./images/road-map.png" alt="road map of Europe")
      
+block table
+    h3.tracked.f3.fw4=view.tableHeading
+  
+    #table_container.w-100
+        +table(view.table)  
