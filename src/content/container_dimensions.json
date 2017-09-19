@@ -1,0 +1,167 @@
+{
+  "table_headings": [
+    {
+      "top_heading": "Unit type"
+    },
+    {
+      "top_heading": "H"
+    },
+    {
+      "top_heading": "Internal (m)",
+      "subheadings": ["L", "W", "H"]
+    },
+    {
+      "top_heading": "Door (m)",
+      "subheadings": ["W", "H"]
+    },
+    {
+      "top_heading": "Capacity",
+      "subheadings": ["Euro pallets", "m³"]
+    }
+  ],
+  "container_types": [
+    {
+      "type": "Standard 20DC",
+      "height": "8'6\"",
+      "internal_l": "5.90",
+      "internal_w": "2.35",
+      "internal_h": "2.39",
+      "door_w": "2.34",
+      "door_h": "2.28",
+      "euro_pallets": "12",
+      "m3": "33.20"
+    },
+    {
+      "type": "Standard 40DC",
+      "height": "8'6\"",
+      "internal_l": "12.03",
+      "internal_w": "2.35",
+      "internal_h": "2.39",
+      "door_w": "2.34",
+      "door_h": "2.28",
+      "euro_pallets": "25",
+      "m3": "67.70"
+    },
+    {
+      "type": "High Cube 40HC",
+      "height": "9'6\"",
+      "internal_l": "12.03",
+      "internal_w": "2.35",
+      "internal_h": "2.69",
+      "door_w": "2.34",
+      "door_h": "2.58",
+      "euro_pallets": "25",
+      "m3": "76.30"
+    },
+    {
+      "type": "High Cube 45HC",
+      "height": "9'6\"",
+      "internal_l": "13.55",
+      "internal_w": "2.35",
+      "internal_h": "2.69",
+      "door_w": "2.34",
+      "door_h": "2.58",
+      "euro_pallets": "27",
+      "m3": "86.10"
+    },
+    {
+      "type": "High Cube Palletwide 40HCPW",
+      "height": "9'6\"",
+      "internal_l": "12.10",
+      "internal_w": "2.44",
+      "internal_h": "2.69",
+      "door_w": "2.40",
+      "door_h": "2.58",
+      "euro_pallets": "30",
+      "m3": "79.00"
+    },
+    {
+      "type": "High Cube Palletwide 45HCPW",
+      "height": "9'6\"",
+      "internal_l": "13.55",
+      "internal_w": "2.44",
+      "internal_h": "2.69",
+      "door_w": "2.40",
+      "door_h": "2.58",
+      "euro_pallets": "33",
+      "m3": "89.20"
+    },
+    {
+      "type": "Flat Rack 20FR",
+      "height": "8'6\"",
+      "internal_l": "5.63",
+      "internal_w": "2.22",
+      "internal_h": "2.23",
+      "door_w": "-",
+      "door_h": "-",
+      "euro_pallets": "-",
+      "m3": "-"
+    },
+    {
+      "type": "Flat Rack 40FR",
+      "height": "8'6\"",
+      "internal_l": "11.77",
+      "internal_w": "2.22",
+      "internal_h": "1.95",
+      "door_w": "-",
+      "door_h": "-",
+      "euro_pallets": "-",
+      "m3": "-"
+    },
+    {
+      "type": "Open Top 20OT",
+      "height": "8'6\"",
+      "internal_l": "5.89",
+      "internal_w": "2.35",
+      "internal_h": "2.34",
+      "door_w": "2.32",
+      "door_h": "2.18",
+      "euro_pallets": "11",
+      "m3": "32.50"
+    },
+    {
+      "type": "Open Top 40OT",
+      "height": "8'6\"",
+      "internal_l": "12.03",
+      "internal_w": "2.35",
+      "internal_h": "2.34",
+      "door_w": "2.32",
+      "door_h": "2.27",
+      "euro_pallets": "25",
+      "m3": "65.90"
+    },
+    {
+      "type": "Reefer 20RF",
+      "height": "8'6\"",
+      "internal_l": "5.50",
+      "internal_w": "2.29",
+      "internal_h": "2.27",
+      "door_w": "2.28",
+      "door_h": "2.21",
+      "euro_pallets": "11",
+      "m3": "28.80"
+    },
+    {
+      "type": "Reefer 40RF",
+      "height": "8'6\"",
+      "internal_l": "11.58",
+      "internal_w": "2.29",
+      "internal_h": "2.20",
+      "door_w": "2.28",
+      "door_h": "2.16",
+      "euro_pallets": "23",
+      "m3": "57.80"
+    },
+    {
+      "type": "Reefer 40HCRF",
+      "height": "9'6\"",
+      "internal_l": "11.58",
+      "internal_w": "2.29",
+      "internal_h": "2.55",
+      "door_w": "2.28",
+      "door_h": "2.44",
+      "euro_pallets": "23",
+      "m3": "67.90"
+    }
+  ]
+}
