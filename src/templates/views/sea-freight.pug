@@ -16,3 +16,29 @@ block images
     +mapImage('./images/sea-map-1.png', 'sea map of Europe, Asia and Africa')
     +mapImage('./images/sea-map-2.png', 'sea map of Europe')
     +mapImage('./images/sea-map-3.png', 'sea map of Europe, Africa and North America')
+
+block table 
+    h3.tracked.f3.fw4=view.tableHeading
+    
+    #table_container.w-100
+        table.f5
+            thead
+                tr
+                    for head in view.table.table_headings
+                        if head.subheadings
+                            th.bg-white.ma1.pa2(colspan=head.subheadings.length)=head.top_heading
+                        else 
+                            th.bg-white.ma1.pa2=head.top_heading
+                tr
+                    for head in view.table.table_headings
+                        if head.subheadings
+                            for sub in head.subheadings 
+                                th.bg-blue.ma1.ph2=sub
+                        else 
+                                th.bg.blue.ma1.ph2.w-100
+            tbody
+                for type in view.table.container_types
+                    tr
+                        for key in Object.keys(type)
+                            td.pa2=type[key]
+                
