@@ -1,6 +1,8 @@
 extends ../layout/base
 
 block content
+  
+    - const mapBgStyle =[ "background-image:url('./images/map-coot.png')", "background-repeat:no-repeat;", "background-position:left", ]
     
     include ../partials/header
     
@@ -18,7 +20,7 @@ block content
                 
             #contact_top-col2.w-100.w-50-ns
             
-                #map_container.h5.w-100.bg-blue
+                #map_container.h5.w-100.bg-green.contain(style=mapBgStyle.join(';'))
                   
         section#contact_bottom.flex.flex-wrap.row-reverse-ns
           
