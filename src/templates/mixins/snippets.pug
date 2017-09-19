@@ -2,6 +2,10 @@ mixin ctaButton(link, text)
     form(action=link).w-100.pv2.tc.tr-l
         input(type="submit" value=text).bg-red.white.pa2.w-100.mw6.f4.f2-ns.shadow-6.lh-title.tracked.pointer
 
+//- pageheading and subheading are styled the same, usage depends on page structure
+mixin pageheading(text)
+    h1.b.f4.f2-ns.lh-title.tracked.near-black=text
+            
 mixin subheading(text)
     h2.b.f4.f2-ns.lh-title.tracked.near-black=text
     
