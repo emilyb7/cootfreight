@@ -22,23 +22,23 @@ block table
     
     #table_container.w-100
         table.f5
-            thead
-                tr
+            thead.tracked
+                tr.bg-gray.white
                     for head in view.table.table_headings
                         if head.subheadings
-                            th.bg-white.ma1.pa2(colspan=head.subheadings.length)=head.top_heading
+                            th.mh1.pa2(colspan=head.subheadings.length)=head.top_heading
                         else 
-                            th.bg-white.ma1.pa2=head.top_heading
-                tr
+                            th.mh1.pa2=head.top_heading
+                tr.bg-washed-green
                     for head in view.table.table_headings
                         if head.subheadings
                             for sub in head.subheadings 
-                                th.bg-blue.ma1.ph2=sub
+                                th.mh1.ph2=sub
                         else 
-                                th.bg.blue.ma1.ph2.w-100
-            tbody
-                for type in view.table.container_types
-                    tr
+                                th.mh1.ph2.w-100
+            tbody.f6
+                for type, i in view.table.container_types
+                    tr(class=`bg-${i % 2 ? "washed-green" : "white"}`)
                         for key in Object.keys(type)
                             td.pa2=type[key]
                 
