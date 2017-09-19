@@ -21,24 +21,5 @@ block table
     h3.tracked.f3.fw4=view.tableHeading
     
     #table_container.w-100
-        table.f5
-            thead.tracked
-                tr.bg-gray.white
-                    for head in view.table.table_headings
-                        if head.subheadings
-                            th.mh1.pa2(colspan=head.subheadings.length)=head.top_heading
-                        else 
-                            th.mh1.pa2=head.top_heading
-                tr.bg-washed-green
-                    for head in view.table.table_headings
-                        if head.subheadings
-                            for sub in head.subheadings 
-                                th.mh1.ph2=sub
-                        else 
-                                th.mh1.ph2.w-100
-            tbody.f6
-                for type, i in view.table.container_types
-                    tr(class=`bg-${i % 2 ? "washed-green" : "white"}`)
-                        for key in Object.keys(type)
-                            td.pa2=type[key]
+        +table(view.table)
                 

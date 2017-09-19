@@ -1,0 +1,24 @@
+mixin th(content, colspan)
+    th.mh1.pa2(colspan=colspan)=content
+
+mixin table(table)
+    table
+        thead.tracked.f5
+            tr.bg-gray.white
+                for head in table.table_headings
+                    if head.subheadings
+                        +th(head.top_heading, head.subheadings.length)
+                    else 
+                        +th(head.top_heading, 0)
+            tr.bg-washed-green
+                for head in table.table_headings
+                    if head.subheadings
+                        for sub in head.subheadings 
+                            +th(sub, 0)
+                    else 
+                            +th("", 0)
+        tbody.f6
+            for type, i in table.container_types
+                tr(class=`bg-${i % 2 ? "washed-green" : "white"}`)
+                    for key, i in Object.keys(type)
+                        td.pa2(class=`w${i === 0 ? "-50" : "4"}`)=type[key]
