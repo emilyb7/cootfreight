@@ -1,4 +1,4 @@
-### International Maritime Dangerous Goods (IMDG) Codes
+## International Maritime Dangerous Goods (IMDG) Codes
 
 **Class 1 — Explosives**
 
