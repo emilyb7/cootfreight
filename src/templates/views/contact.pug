@@ -20,8 +20,10 @@ block content
                 
             #contact_top-col2.w-100.w-50-ns
             
-                #map_container.h5.w-100.bg-green.contain(style=mapBgStyle.join(';'))
-                  
+                a(href=googleMapsLink title=view.mapLinkText target="_blank")
+                    span.screen-reader-text=view.mapLinkText
+                    #map_container.h5.w-100.bg-green.cover.pointer.shadow-6(style=mapBgStyle.join(';'))
+                                        
         section#contact_bottom.flex.flex-wrap.row-reverse-ns
           
             #contact_bottom-col1.w-100.w-50-ns

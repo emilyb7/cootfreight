@@ -2,7 +2,7 @@
 /* font sizes are in line with tachyons type scale */
 
 body {
-  font-family: open-sans;
+  font-family: open-sans, sans-serif;
   background-color: #66cccc;
   display: flex;
   flex-direction: column;
@@ -73,6 +73,16 @@ input {
 #contact_phone-email p {
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+/* accessibility fix taken from
+https://github.com/tachyons-css/tachyons-verbose/blob/master/css/tachyons.css */
+
+.screen-reader-text {
+  position: fixed !important;
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
 }
 
 /* same screen size as for tachyons -ns extension */
