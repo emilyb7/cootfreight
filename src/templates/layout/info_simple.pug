@@ -12,9 +12,13 @@ block content
       
         section.template_top.pl5-ns.pt3-ns
             block body
+              
+        section.template_top.pl5-ns.pt3-ns.dn.dib-l
+            block table
         
-        section.template_bottom.flex.justify-center.flex-column.pv3.pl5-ns
-            +ctaButton('./contact', view.cta)
+        section.template_bottom.flex.justify-center.flex-column.pv3.pl5-ns.tc
+            .button_container.mw7
+                +ctaButton('./contact', view.cta)
             
             .link-bottom.dn-ns
                 +linkToHome()

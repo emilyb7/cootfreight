@@ -1,9 +1,13 @@
 mixin th(content, colspan)
     th.mh1.pa2(colspan=colspan)=content
+    
+mixin thead()
+    thead.tracked.f5
+        block
 
 mixin table(table)
     table
-        thead.tracked.f5
+        +thead()
             tr.bg-gray.white
                 for head in table.table_headings
                     if head.subheadings
